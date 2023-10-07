@@ -35,6 +35,8 @@ pipeline {
                     } else {
                         echo "Container '${containerName}' is not running."
                     }
+                    // Pulling Images from Local Registry
+                    sh "docker pull node:5000/calculator:v$BUILD_NUMBER"
                     // Create new container
                     sh "docker container run -itd --name calculator -p 3000:3000 node:5000/calculator:v$BUILD_NUMBER"
                 }
