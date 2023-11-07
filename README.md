@@ -1,9 +1,9 @@
 Calculator.js: a node.js Demonstration Project
 ==============================================
 
-To build, simply:
+# To build, simply:
 
-# Runs `npm install` to install dependencies.
+### Run `npm install` to install dependencies.
 ```bash
 npm install 
 ```
