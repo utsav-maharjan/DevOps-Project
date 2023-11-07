@@ -1,0 +1,16 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: calculator-app
+
+spec:
+  type: NodePort
+  ports:
+  - targetPort: 3000
+    port: 3000
+    nodePort: 30017
+
+  selector:
+    type: front-end

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculator-app
+  labels:
+    app: calculator-app
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: calculator-app
+      labels:
+        type: front-end
+    spec:
+      containers:
+      - name: calculator
+        image: utsav70/calculator-image:latest
+        ports:
+        - containerPort: 3000
+  replicas: 2
+  selector:
+    matchLabels:
+      type: front-end
